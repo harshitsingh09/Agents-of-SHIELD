@@ -9,7 +9,7 @@ def detect_face(img):
  
 
 
-    face_cascade = cv2.CascadeClassifier('opencv-files/lbpcascade_frontalface.xml')
+    face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'lbpcascade_frontalface.xml')
  
 
     faces = face_cascade.detectMultiScale(gray, scaleFactor=1.2, minNeighbors=5);
@@ -68,7 +68,7 @@ def prepare_training_data(data_folder_path):
     return faces, labels
 
 print("Preparing data...")
-faces, labels = prepare_training_data("training-data")
+faces, labels = prepare_training_data("subjects")
 print("Data prepared")
 print("Total faces: ", len(faces))
 print("Total labels: ", len(labels))
