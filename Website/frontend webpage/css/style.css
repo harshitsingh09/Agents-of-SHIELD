@@ -380,6 +380,7 @@
     padding-top: 5%;
     justify-content: center;
     padding-bottom: 5%;
+    margin-top: -50%;
 }
 .firstHalf{
     width:75%;
@@ -416,7 +417,7 @@
 
 .outerShadowBox {
     box-shadow: 0 0 6px 4px #ededed;
-    background: #fff;
+    /* background: #fff; */
     padding: 15px;
     overflow: hidden;
     border-radius: 9px;
@@ -425,6 +426,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+#y{
+    display: flex;
 }
 
 .tab {
@@ -450,7 +454,7 @@ body {
     margin: 0;
 }
 
-div#copy-downlod-option {
+div #copy-downlod-option {
     font-size: 15px;
     display: inline-block;
     float: right;

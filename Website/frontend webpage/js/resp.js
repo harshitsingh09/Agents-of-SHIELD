@@ -57,6 +57,8 @@ function draw()
         //incrementing Y coordinate
         drops[i]++;
     }
+    
 }
 
 setInterval(draw, 35);
+
