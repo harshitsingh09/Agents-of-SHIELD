@@ -57,7 +57,9 @@ function draw()
         //incrementing Y coordinate
         drops[i]++;
     }
-    
+    var img = c.toDataURL("image/png");
+    var b = document.getElementById("y");
+    b.style.backgroundImage = "url(" + img + ")";
 }
 
 setInterval(draw, 35);
