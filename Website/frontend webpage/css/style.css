@@ -43,7 +43,7 @@
 .nav-list li a {
     text-decoration: none;
     color: black;
-    font-family: 'Oswald', sans-serif;
+    font-family: fantasy;
     font-size: 20px;
 }
 
@@ -340,11 +340,12 @@
 }
 
 .btn {
-    background-color: rgb(255, 182, 255);
+    background-color:rgb(157 135 214);
+    font-family: 'Ubuntu';
     display: inline-block;
     padding: 6px 12px;
     margin-bottom: 0;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.42857143;
     text-align: center;
@@ -368,8 +369,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: purple;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    text-shadow: 7px 7px 7px #111;
     max-width: 100%;
     width: 80%;
     margin: auto;
@@ -400,7 +402,7 @@
 }
 
 .text-big {
-    font-size: 40px;
+    font-size: 44px;
     display: flex;
     justify-content: center;
 }
@@ -416,8 +418,8 @@
 }
 
 .outerShadowBox {
-    box-shadow: 0 0 6px 4px #ededed;
-    /* background: #fff; */
+    box-shadow: 0 0 6px 4px #ffffff54;
+    background: #ffffff54;
     padding: 15px;
     overflow: hidden;
     border-radius: 9px;
@@ -433,8 +435,8 @@
 
 .tab {
     overflow: visible;
-    border: 1px solid #3ACD99;
-    background-color: #3ACD99;
+    border: 3px solid 3px solid rgb(196 186 224);
+    background-color:rgb(157 135 214);
     height: 35px;
     padding: 0.4rem;
     border-radius: 4px 4px 0px 0px;
@@ -570,6 +572,7 @@ span.itxt {
     display:flex;
     justify-content: center;
     font-size: 20PX;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 
