@@ -67,11 +67,11 @@
     border-radius: 9px;
 }
 
-.background {
+/*.background {
     background: rgba(0, 0, 0, 0.9) url('../image/website-background-templates.jpg');
     background-size: cover;
     background-blend-mode: lighten;
-}
+}*/
 
 .container-fluid {
     margin-right: auto;
@@ -518,6 +518,7 @@ span.itxt {
     height:70%;
     display:block;
     align-items: center;
+    
 }
 .thirdHalf{
     height:40%
