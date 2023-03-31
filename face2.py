@@ -9,7 +9,7 @@ def detect_face(img):
  
 
 
-    face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'lbpcascade_frontalface.xml')
+    face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_alt2.xml')
  
 
     faces = face_cascade.detectMultiScale(gray, scaleFactor=1.2, minNeighbors=5);
@@ -72,5 +72,5 @@ faces, labels = prepare_training_data("subjects")
 print("Data prepared")
 print("Total faces: ", len(faces))
 print("Total labels: ", len(labels))
-face_recognizer = cv2.face.createLBPHFaceRecognizer()
+face_recognizer = cv2.face.LBPHFisherFaceRecognizer()
 face_recognizer.train(faces, np.array(labels))
