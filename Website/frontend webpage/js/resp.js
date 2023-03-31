@@ -60,7 +60,10 @@ function draw()
     var img = c.toDataURL("image/png");
     var b = document.getElementById("y");
     b.style.backgroundImage = "url(" + img + ")";
-}
-
+}   
 setInterval(draw, 35);
 
+var btn=document.getElementById('uploadBtn')
+btn.addEventListener('click',function(){
+
+});
