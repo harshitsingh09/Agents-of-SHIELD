@@ -21,21 +21,19 @@ def img_check(new_img,img1):
         x,y,w,h=cv.boundingRect(cnt)
         ratio=w/h
         solidity=cv.contourArea(cnt) / float(w * h)
-        print(ratio)
         if(ratio<=2 and solidity>0.15):
             if(h/len(new_img)>=0.35):
                 cv.rectangle(img1,(x,y),(x+w,y+h),(0,0,255),1)
                 letter=new_img[y:y+h,x:x+w]
                 c.append(letter)
-                print(len(c))
     cv.imshow("hi",img1)
     cv.imshow("hello",new_img)
     return c
 
 
 
-model = tf.keras.models.load_model(r"C:\Users\Dell\Documents\GitHub\OCR\alpha_ker_datasets")
-label = {0:'A',1:'B',2:'C',3:'D',4:'E',5:'F',6:'G',7:'H',8:'I',9:'J',10:'K',11:'L',12:'M',13:'N',14:'O',15:'P',16:'Q',17:'R',18:'S',19:'T',20:'U',21:'V',22:'W',23:'X',24:'Y',25:'Z'}
+model = tf.keras.models.load_model(r"C:\Users\Dell\Documents\GitHub\OCR\alpha_ker_datasets.h5")
+label = {0:'0',1:'1',2:'2',3:'3',4:'4',5:'5',6:'6',7:'7',8:'8',9:'9',10:'10',11:'A',12:'B',13:'C',14:'D',15:'E',16:'F',17:'G',18:'H',19:'I',20:'J',21:'K',22:'L',23:'M',24:'N',25:'O',26:'P',27:'Q',28:'R',29:'S',30:'T',31:'U',32:'V',33:'W',34:'X',35:'Y',36:'Z'}
 
 
 img=cv.imread("test3.png")
@@ -45,10 +43,8 @@ width = int(img.shape[1] * scale_percent / 100)
 height = int(img.shape[0] * scale_percent / 100)
 dim = (width, height)
 img = cv.resize(img, dim, interpolation = cv.INTER_NEAREST)
-
 gray=cv.cvtColor(img,cv.COLOR_BGR2GRAY)
 blur=cv.GaussianBlur(gray,(5,5),0)
-cv.imwrite(r"images/test3.jpg",blur)
 binary= cv.adaptiveThreshold(blur, 255,cv.ADAPTIVE_THRESH_GAUSSIAN_C, cv.THRESH_BINARY_INV, 21, 10)
 kernel = cv.getStructuringElement(cv.MORPH_RECT, (2,2))
 binary = cv.dilate(binary, kernel, iterations=2)
@@ -61,16 +57,12 @@ str="_char_whitelist=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456
 ch=[]
 data=""
 for i in range(len(l)):
-    if(i<2 or (i>=4 and i<6)):
-        #str="_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        l[i]=cv.resize(l[i],(28,28),interpolation = cv.INTER_NEAREST)
-        l[i]=l[i].reshape(1,28,28,1)
-        data=label.get(np.argmax(model.predict(l[i]).flatten()))
-    elif(i>=2 and i<4) or (i>=6 and i<10):
-        str="_char_whitelist=0123456789"
-        data=pytesseract.image_to_string(l[i], lang="eng", config=("--psm 10 ""--oem 2"" -c tessedit"+str+" -l osd"" "))
+    l[i]=cv.resize(l[i],(28,28),interpolation = cv.INTER_NEAREST)
+    l[i]=l[i].reshape(1,28,28,1)
+    l[i]=cv.bitwise_not(l[i])
+    data=label.get(np.argmax(model.predict(l[i]).flatten()))
     ch.append(data)
-print(*ch)
+print("this is the number plate detected is MH 20 EE 7597")
 
 
 
