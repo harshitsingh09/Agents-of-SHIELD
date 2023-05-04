@@ -339,8 +339,9 @@
     font-size: 8px;
     line-height: 1
 }
-
+#uploadBtn,
 .btn {
+    
     background-color:rgb(157 135 214);
     font-family: 'Ubuntu';
     display: inline-block;
@@ -414,6 +415,7 @@
     justify-content: center;
 }
 .btn-sm{
+    
     padding:6px 10px;
     vertical-align: center;
     font-family: 'Oswald', sans-serif;
@@ -543,13 +545,13 @@ span.itxt {
     justify-content: center;
     flex-direction: center;
 }
-.text-center{
+/* .text-center{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: center;
-    margin-top: -30%;
-}
+    
+} */
 
 .btnup{
     background-color: rgb(255, 182, 255);
@@ -711,3 +713,27 @@ span.itxt {
 .name{
     font-family: 'Oswald', sans-serif;
     font-size:25px;}
+.btn-md{
+    background-color:rgb(157 135 214);
+    font-family: 'Ubuntu';
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border-radius: 8px;
+    cursor:pointer;
+    border:2px solid white;
+}

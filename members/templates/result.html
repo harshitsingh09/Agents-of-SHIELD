@@ -67,7 +67,10 @@
                 <div class="box-main">
                     <div class="firstHalf">
                         <p class="text-white">&nbsp;</p>
-                        <p class="text-big">Registration Number Recognizer</p>
+                        <!-- <p class="text-big">Registration Number Recognizer</p>
+                        <p class="text-big">&</p>
+                        <p class="text-big">Face Recognition System</p> -->
+                        <h2 class="text-big"style="font-size: 44px;">ADVANCED ANPR &  FRS SYSTEM </h2>
                         <p class="text-white">&nbsp;</p>
                         <p class="text-white">&nbsp;</p>
                         <!--<p class="text-small">use the browse button to find the image you need to process</p>
@@ -99,25 +102,38 @@
                             </div>
 
                             <span class="svg_block">
+
                                 <br>
                                 <br>
-                                <label for="up_image"><img src="{%static 'C://Users//nithe//OneDrive//Desktop//kavach_django//lp_predictor//static//upload-icon.png'%}" width="110%" height="100%" alt="uploader"></label>
-                                <input type="file" name="" id="up_image" style="display: none;visibility:none;">
+                                
+                                    
+                                    <img src="{{img_url}}" id="upid" width="150px" height="150px" >
+                              
+                                
+                                <label for="up_image"><img src="{%static 'C://Users//nithe//OneDrive//Desktop//kavach_django//lp_predictor//static//upload-icon.png'%}" width="110%" height="100%" alt="uploader" id="ubutton"></label>
+                                <form method="POST" enctype="multipart/form-data" id="uploadForm">
+                                    {%csrf_token%}
+                                    <input type="file"  name="myfile" id="up_image" style="display: none;">
+                                </form>
+                                
+                                
                             </span>
                             <br>
                             <div>
                                 <br>
                             </div>
-                            <div class="text-center">
-                                <button type="button" class="btn btn-md" id="uploadBtn">
-                                    <span data-title="Upload Image">
-                                        <i class="fa fa-check">
-                                        </i>
-                                        &nbsp;&nbsp;SUBMIT
-                                    </span>
-                                </button>
-
-                            </div>
+                            
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-md" id="uploadBtn">
+                                        <span data-title="Upload Image">
+                                            <i class="fa fa-check">
+                                            </i>
+                                            &nbsp;&nbsp;SUBMIT
+                                        </span>
+                                    </button>
+    
+                                </div>
+                            
 
 
                         </div>
@@ -125,7 +141,7 @@
 
                     <div class="container noP">
                         <div class="col-md-2 shadowBox" id="col-md-2">
-                            <h1 class="h_tool">Plate number</h1>
+                            <h1 class="h_tool">Plate number & Faces Recognised</h1>
                             <br>
 
 
@@ -146,12 +162,12 @@
                                     </div>
                             </div>
                         </div>
-                        <div class="container noP">
+                        <!-- <div class="container noP">
                             <div class="col-md-2 shadowBox" id="col-md-2">
                                 <h1 class="h_tool">Face Image</h1>
                                <div>
                                 {{faceresult}}
-                               </div>
+                               </div> -->
                                 <br>
                                 <br>
                                 <br>
@@ -382,6 +398,21 @@ function draw()
 }   
 setInterval(draw, 35);
 
+let profilepic=document.getElementById('upid')
+let btn=document.getElementById('ubutton')
+let inputfile=document.getElementById('up_image')
+profilepic.style.display="none"
+inputfile.onchange=function(){
+    profilepic.style.display="block"
+    profilepic.src=URL.createObjectURL(inputfile.files[0])
+    btn.style.display='none';
+}
+let subbtn=document.getElementById('uploadBtn')
+subbtn.style.marginTop="-10px"
+subbtn.addEventListener('click',function(){
+    
+    document.getElementById('uploadForm').submit();
+})
 
     </script>
 </body>

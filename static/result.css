@@ -80,7 +80,7 @@
     display: flex;
     flex: auto;
     width:100%;
-    height:75%;
+    height:95%;
 }
 
 .shadowBox {
@@ -424,7 +424,7 @@
     overflow: hidden;
     border-radius: 9px;
     width: 79%;
-    height:90%;
+    height:98%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -517,7 +517,7 @@ span.itxt {
 
 #col-md-1{
     width:90%;
-    height:70%;
+    height:90%;
     display:block;
     align-items: center;
     
@@ -530,6 +530,7 @@ span.itxt {
 }
 
 .svg_block{
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -638,7 +639,7 @@ span.itxt {
     overflow: hidden;
     border-radius: 2px;
     width: 90%;
-    height: 13px;
+    height: 19px;
     display: flex;
     justify-content: center;
     align-items: center;
