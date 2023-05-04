@@ -339,13 +339,22 @@
     font-size: 8px;
     line-height: 1
 }
+<<<<<<< HEAD
 #uploadBtn,
 .btn {
     
+=======
+#uploadBtn
+.btn {
+>>>>>>> 84350be6d4d19462427f35a2f95c6f00e070965d
     background-color:rgb(157 135 214);
     font-family: 'Ubuntu';
     display: inline-block;
     padding: 6px 12px;
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 84350be6d4d19462427f35a2f95c6f00e070965d
     margin-bottom: 0;
     font-size: 16px;
     font-weight: 400;
@@ -415,7 +424,10 @@
     justify-content: center;
 }
 .btn-sm{
+<<<<<<< HEAD
     
+=======
+>>>>>>> 84350be6d4d19462427f35a2f95c6f00e070965d
     padding:6px 10px;
     vertical-align: center;
     font-family: 'Oswald', sans-serif;
@@ -545,13 +557,22 @@ span.itxt {
     justify-content: center;
     flex-direction: center;
 }
+<<<<<<< HEAD
 /* .text-center{
+=======
+.text-center{
+>>>>>>> 84350be6d4d19462427f35a2f95c6f00e070965d
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: center;
+<<<<<<< HEAD
     
 } */
+=======
+    margin-top: -30%;
+}
+>>>>>>> 84350be6d4d19462427f35a2f95c6f00e070965d
 
 .btnup{
     background-color: rgb(255, 182, 255);
@@ -712,6 +733,7 @@ span.itxt {
 }
 .name{
     font-family: 'Oswald', sans-serif;
+<<<<<<< HEAD
     font-size:25px;}
 .btn-md{
     background-color:rgb(157 135 214);
@@ -737,3 +759,6 @@ span.itxt {
     cursor:pointer;
     border:2px solid white;
 }
+=======
+    font-size:25px;}
+>>>>>>> 84350be6d4d19462427f35a2f95c6f00e070965d

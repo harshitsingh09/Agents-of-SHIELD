@@ -402,7 +402,11 @@
 }
 
 .text-big {
+<<<<<<< HEAD
     font-size: 44px;
+=======
+    font-size: 10px;
+>>>>>>> 84350be6d4d19462427f35a2f95c6f00e070965d
     display: flex;
     justify-content: center;
 }
